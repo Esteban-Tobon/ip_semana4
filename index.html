@@ -1,14 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Formulario de Registro de Productos</title>
+    <title>Registro de Productos</title>
 </head>
+
 <body>
-    <h1>Registro de Productos</h1>
-    <form id="registro-producto" action="/api/productos" method="POST">
-        <!-- Aquí irán los campos del formulario -->
-        <button type="submit">Registrar Producto</button>
+    <header>
+
+        <h1>Registro de Productos</h1>
+        <p>En este formulario podras registras los productos que deses></p>
+
+    </header>
+
+
+
+    <form id="registro de productos" action="/api/productos" method="post">
+
+        <div>
+            <label for="producto">Producto: </label>
+            <input type="text" name="Producto: " value="" id="producto">
+
+        </div>
+
+        <br><br>
+
+        <div>
+
+            <label for="precio">Precio:</label> <input type="number" name="precio" id="precio" min="0" required>
+
+        </div>
+
+        <br><br>
+
+        <div>
+            <label for="categoria">Categoría:</label> <select name="categoria" id="categoria" required>
+                <option value="Tecnologia">Tecnologia</option>
+                <option value="Hogar">Hogar</option>
+                <option value="Otors">Otros</option>
+            </select>
+           
+        </div>
+
+        <br><br>
+
+        <div>
+            <label for="descripcion">Descripción:</label> <textarea name="descripcion" id="descripcion" rows="5"
+                required></textarea>
+        </div>
+
+        <br><br>
+
+        <div>
+            <label for="stock">Stock:</label> <input type="number" name="stock" id="stock" min="0" required>
+        </div>
+
+        <br><br>
+
+        <div>
+            <button type="submit" value="Enviar">Enviar</button>
+        </div>
+
+
+
     </form>
+
+    <footer></footer>
+
 </body>
+
 </html>
